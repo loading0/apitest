@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/IdeaProjects/ApiTest">
+        <classes>
+            <class name="com.corp.test.Query">
+                <methods>
+                    <include name="query"/>
+                    <!--include name="delivery"/-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.corp.tech.ExtentTestNGIReporterListener"/>
+        <!--listener class-name="org.uncommons.reportng.HTMLReporter"/-->
+        <!--listener class-name="org.uncommons.reportng.JUnitXMLReporter"/-->
+    </listeners>
+</suite>

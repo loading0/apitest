@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>api自动化测试报告</title>
+
+	<style type='text/css'>
+			.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>api自动化测试报告</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jul 8, 2021 05:18:02 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>query:查询快递</span>
+						<span class='test-time'>Jul 8, 2021 05:18:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 8, 2021 05:18:02 PM</span>
+	<span class='label end-time'>Jul 8, 2021 05:18:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+632ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>读取excel请求参数：{"type":"yuantong","postid":"1234567890"}</td>
+				</tr>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>实际发送请求参数：{"type":"yuantong","postid":"1234567890"}</td>
+				</tr>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>响应原始报文：{"message":"ok","nu":"1234567890","ischeck":"0","condition":"H100","com":"yuantong","status":"200","state":"5","data":[{"time":"2021-07-08 11:42:35","ftime":"2021-07-08 11:42:35","context":"【苏州市】【苏州吴江北厍网点】的极兔小哥袁新凯(15295684675)正在派件（可放心接听952300专属热线），如有异常问题或需投诉请拨打网点电话:17798640139|查件进港,17300691378|查件进港 ","location":"江苏省 苏州市 吴江区"},{"time":"2021-07-08 09:13:48","ftime":"2021-07-08 09:13:48","context":"【苏州市】快件到达【苏州吴江北厍网点】","location":"江苏省 苏州市 吴江区"},{"time":"2021-07-08 05:39:40","ftime":"2021-07-08 05:39:40","context":"【苏州市】快件离开【苏州集散点】已发往【苏州吴江北厍网点】","location":"江苏省 苏州市 吴中区"},{"time":"2021-07-08 05:07:26","ftime":"2021-07-08 05:07:26","context":"【苏州市】快件离开【苏州集散点】已发往【苏州吴江北厍网点】","location":"江苏省 苏州市 吴中区"},{"time":"2021-07-08 03:32:37","ftime":"2021-07-08 03:32:37","context":"【无锡市】快件离开【无锡转运中心】已发往【苏州集散点】","location":"江苏省 无锡市 锡山区"},{"time":"2021-07-08 03:29:56","ftime":"2021-07-08 03:29:56","context":"【无锡市】快件到达【无锡转运中心】","location":"江苏省 无锡市 锡山区"},{"time":"2021-07-07 21:35:27","ftime":"2021-07-07 21:35:27","context":"【常州市】快件离开【常州转运中心】已发往【无锡转运中心】","location":"江苏省 常州市 天宁区"},{"time":"2021-07-07 21:33:47","ftime":"2021-07-07 21:33:47","context":"【常州市】快件到达【常州转运中心】","location":"江苏省 常州市 天宁区"},{"time":"2021-07-07 00:29:31","ftime":"2021-07-07 00:29:31","context":"【北京市】快件离开【北京通州转运中心】已发往【常州转运中心】","location":"北京 北京市 通州区"},{"time":"2021-07-07 00:26:59","ftime":"2021-07-07 00:26:59","context":"【北京市】快件到达【北京通州转运中心】","location":"北京 北京市 通州区"},{"time":"2021-07-06 20:34:35","ftime":"2021-07-06 20:34:35","context":"【廊坊市】快件离开【廊坊市永清集散点】已发往【北京通州转运中心】","location":"河北省 廊坊市 永清县"},{"time":"2021-07-06 17:04:29","ftime":"2021-07-06 17:04:29","context":"【廊坊市】快件离开【廊坊固安网点】已发往【廊坊市永清集散点】","location":"河北省 廊坊市 固安县"},{"time":"2021-07-06 16:58:29","ftime":"2021-07-06 16:58:29","context":"【廊坊市】【廊坊固安网点】您的极兔小哥梁应伦(15090226420)已取件。如有异常问题或需投诉请拨打网点电话:17732631205","location":"河北省 廊坊市 固安县"}]}</td>
+				</tr>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>期望数据：{"message":"ok","status":"200"}</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>query:查询快递(type传递)</span>
+						<span class='test-time'>Jul 8, 2021 05:18:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 8, 2021 05:18:02 PM</span>
+	<span class='label end-time'>Jul 8, 2021 05:18:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+80ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>读取excel请求参数：{"type":"${type}","postid":"1234567890"}</td>
+				</tr>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>实际发送请求参数：{"type":"yuantong","postid":"1234567890"}</td>
+				</tr>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>响应原始报文：{"message":"ok","nu":"1234567890","ischeck":"1","condition":"F00","com":"yuantong","status":"200","state":"3","data":[{"time":"2021-07-06 19:25:05","ftime":"2021-07-06 19:25:05","context":"[广东深圳公司宝安区固戍分部] 【深圳市】您的快件已签收，签收人: 一楼，如有疑问请电联快递员:黎景洪(18576653841) ，投诉电话:020-23393006","location":"广东深圳公司宝安区固戍分部"},{"time":"2021-07-06 11:49:39","ftime":"2021-07-06 11:49:39","context":"[广东深圳公司宝安区固戍分部]【深圳市】广东深圳公司宝安区固戍分部 快递员 黎景洪(18576653841) 正在为您派送。快件已消毒，小哥体温正常，将佩戴口罩为您派送，您也可联系小哥将快件放置指定代收点或快递柜，祝您身体健康【95121为韵达快递员外呼专属号码，请放心接听】","location":"广东深圳公司宝安区固戍分部"},{"time":"2021-07-06 11:49:09","ftime":"2021-07-06 11:49:09","context":"[广东深圳公司宝安区西乡分拨分部]【深圳市】已离开 广东深圳公司宝安区西乡分拨分部；发往 广东深圳公司宝安区固戍分部(0755-61881840|0755-23094535)","location":"广东深圳公司宝安区西乡分拨分部"},{"time":"2021-07-06 09:15:46","ftime":"2021-07-06 09:15:46","context":"[广东深圳公司]【深圳市】已离开 广东深圳公司；发往 广东深圳公司宝安区固戍分部(0755-61881840|0755-23094535)","location":"广东深圳公司"},{"time":"2021-07-06 09:06:39","ftime":"2021-07-06 09:06:39","context":"[广东深圳公司]【深圳市】已到达 广东深圳公司","location":"广东深圳公司"},{"time":"2021-07-06 03:34:01","ftime":"2021-07-06 03:34:01","context":"[粤中枢纽中心]【佛山市】已离开 粤中枢纽中心；发往 广东深圳公司","location":"粤中枢纽中心"},{"time":"2021-07-06 03:28:54","ftime":"2021-07-06 03:28:54","context":"[粤中枢纽中心]【佛山市】已到达 粤中枢纽中心","location":"粤中枢纽中心"},{"time":"2021-07-06 01:25:58","ftime":"2021-07-06 01:25:58","context":"[广东主城区公司顺德区服务部]【佛山市】已离开 广东主城区公司顺德区服务部；发往 深西地区包","location":"广东主城区公司顺德区服务部"},{"time":"2021-07-06 01:10:42","ftime":"2021-07-06 01:10:42","context":"[广东主城区公司顺德区服务部]【佛山市】广东主城区公司顺德区服务部-莫丽娟(13413278065) 已揽收","location":"广东主城区公司顺德区服务部"},{"time":"2021-07-05 21:48:01","ftime":"2021-07-05 21:48:01","context":"[广东顺德区公司勒流富安淘宝分部]【佛山市】广东顺德区公司勒流富安淘宝分部-郭冠健(13026726993) 已揽收","location":"广东顺德区公司勒流富安淘宝分部"}]}</td>
+				</tr>
+				<tr class='log' status='debug'>
+					<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>期望数据：{"com":"yuantong","message":"ok","status":"200"}</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:18:03 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>2</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>2</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 8, 2021 05:18:02 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 8, 2021 05:18:03 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 0s+848ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 2,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 2,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 8,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='http://extentreports.com/resx/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
