@@ -1,0 +1,25 @@
+test_get_project_list:
+  # 页数，项目名称，期望结果,期望返回码,期望返回信息
+  # page, name, except_result, except_code, except_msg
+  - [1, ~, True, "999999", "成功"]
+  - [2, "系统", True, "999999", "成功"]
+  - [1.5, "系统", False, "999985", "must be integer"]
+
+test_login_user:
+  # 用户名,密码,期望结果,期望返回码,期望返回信息
+  # username, password, except_result, except_code, except_msg
+  - ["admin", "admin", True, "201", "成功"]
+  - ["admin", "123456", False, "999984", "账号或密码错误"]
+
+test_add_project:
+  # 项目名称，类型，版本，描述，期望结果，期望返回码，期望返回信息
+  # name, pro_type, version, description, except_result, except_code, except_msg
+  - ["测试项目1", "Web", "1.0", "这是测试项目1简介", False, "999997", "相同名称"]
+  - ["测试项目2", "App", ~, "这是测试项目1简介", False, "999996", "参数有误"]
+
+test_delete_project:
+  # 项目id列表，期望结果，期望返回码，期望返回信息
+  # ids except_result, except_code, except_msg
+  - [[11], True, "999999", "成功"]
+  - [[999], False, "999995", "项目不存在"]
+

@@ -1,0 +1,3 @@
+init_admin_user:
+  username: "admin"
+  password: "admin"
