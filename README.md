@@ -12,13 +12,13 @@ jenkins集成：main.py 可以对接口测试进行Jenkins持续集成，通过j
 
 ## 项目使用
 
-# 依赖包安装
+### 依赖包安装
 下载项目源码， pip 安装 requirements.txt 依赖，：
 
 ```
 pip3 install -r requirements.txt
 ```
-# 运行main.py
+### 运行main.py
 在setting.ini 配置case_path，可以配置api_test,scenario_test路径，然后运行main.py
 allure会在report/html目录下生成html报告文件,浏览器可以直接打开查看
 
